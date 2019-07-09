@@ -22,3 +22,34 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+def cal_func():
+  #get command line args
+  my_args = sys.argv[1:]
+  
+
+  my_calendar = calendar.Calendar()
+
+  #evaluate conditions based on num args
+  if len(my_args) == 0:
+    
+    return my_calendar.monthdayscalendar(datetime.today().year,datetime.today().month)
+
+  elif len(my_args) == 1:
+    
+    
+    return my_calendar.monthdayscalendar(datetime.today().year,int(my_args[0]))
+    
+
+  elif len(my_args) == 2:
+   
+    return  my_calendar.monthdayscalendar(int(my_args[1]),int(my_args[0]))
+
+  else: 
+    print("Incorrect argument format received, expected 14_cal.py month [year]")
+  
+
+
+print(cal_func())
+
+
