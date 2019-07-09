@@ -5,6 +5,7 @@
 x = 12
 
 def changeX():
+    global x
     x = 99
 
 changeX()
@@ -19,6 +20,8 @@ def outer():
     y = 120
 
     def inner():
+        nonlocal y
+        #here python is being very explicit, whereas in JS this is less so with  being accomplished with closures
         y = 999
 
     inner()
