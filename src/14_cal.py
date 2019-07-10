@@ -25,6 +25,8 @@ from datetime import datetime
 
 def cal_func():
   #get command line args
+
+  #`14_cal.py month [year]`
   my_args = sys.argv[1:]
   
 
